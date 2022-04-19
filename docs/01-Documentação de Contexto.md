@@ -34,13 +34,6 @@ O grupo de trabalho pode fazer uso de questionários, entrevistas e dados estat�
 
 ## Público-Alvo
 
-Descreva quem serão as pessoas que usarão a sua aplicação indicando os diferentes perfis. O objetivo aqui não é definir quem serão os clientes ou quais serão os papéis dos usuários na aplicação. A ideia é, dentro do possível, conhecer um pouco mais sobre o perfil dos usuários: conhecimentos prévios, relação com a tecnologia, relações
-hierárquicas, etc.
+Os hábitos de consumo mudaram. Tempos extremos exigem opções inovadoras, que significam  novas tendências. Alem das inovações, os consumidores buscam praticidade, agilidade e opções que atendam novos perfis, principalmente mais adequadas ao mundo externo.
 
-Adicione informações sobre o público-alvo por meio de uma descrição textual, diagramas de personas e mapa de stakeholders.
-
-> **Links Úteis**:
-> - [Público-alvo](https://blog.hotmart.com/pt-br/publico-alvo/)
-> - [Como definir o público alvo](https://exame.com/pme/5-dicas-essenciais-para-definir-o-publico-alvo-do-seu-negocio/)
-> - [Público-alvo: o que é, tipos, como definir seu público e exemplos](https://klickpages.com.br/blog/publico-alvo-o-que-e/)
-> - [Qual a diferença entre público-alvo e persona?](https://rockcontent.com/blog/diferenca-publico-alvo-e-persona/)
+No cenário de aluguel de carros existem dois perfis de pessoas, aquelas que possuem um veículo com pouca frequência de uso e ainda arcam com todos os custos deste mesmo, e aquelas que não o tem e necessitam de alguma forma. Desta forma, este trabalho estabeleceu-se como público-alvo os jovens, adultos e pessoas mais velhas que necessitam de alugar um carro, seja este para trabalho, viagens ou pequenos serviços, e também os proprietários que não usam e podem alugar seu carro em tempo integral.
