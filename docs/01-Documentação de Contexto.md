@@ -1,39 +1,35 @@
 # Introdução
 
-Texto descritivo com a visão geral do projeto abordado. Inclui o contexto, o problema, os objetivos, a justificativa e o público-alvo do projeto.
+O Brasil é um dos maiores mercados consumidores  de automóveis do mundo, mas já foi o quarto. Atualmente, ficando atrás de vários países, incluindo gigantes como China e Estados Unidos.
+
+Em contraste, tem-se observado um aumento no número de casos em que as pessoas estão vendendo o carro para utilizar aqueles por transporte de aplicativo. Da carestia dos preços dolarizados dos combustíveis à aceleração das despesas com manutenção, o custo para manter um veículo é alto. Ao mesmo tempo, o uso temporário de automóveis, em vez da compra dos veículos, tem ganhado mais espaço no país, isto é mais devido à procura de pessoas que precisam destes para períodos pequenos e não utilizam o veículo diariamente.
+
+Diante disso, torna-se fundamental que existam mais mecanismos que ofereçam a possibilidade de alugar o seus veículos a pessoas que buscam praticidade e flexibilidade no aluguel de carros. 
+
+De acordo com a plataforma de inteligência de mercado global Similarweb, o termo “carro por assinatura” foi o mais procurado de janeiro a março deste ano - nas ferramentas de busca via desktop.
 
 ## Problema
-Nesse momento você deve apresentar o problema que a sua aplicação deve  resolver. No entanto, não é a hora de comentar sobre a aplicação.
-
-Descreva também o contexto em que essa aplicação será usada, se  houver: empresa, tecnologias, etc. Novamente, descreva apenas o que de  fato existir, pois ainda não é a hora de apresentar requisitos  detalhados ou projetos.
-
-Nesse momento, o grupo pode optar por fazer uso  de ferramentas como Design Thinking, que permite um olhar de ponta a ponta para o problema.
-
-> **Links Úteis**:
-> - [Objetivos, Problema de pesquisa e Justificativa](https://medium.com/@versioparole/objetivos-problema-de-pesquisa-e-justificativa-c98c8233b9c3)
-> - [Matriz Certezas, Suposições e Dúvidas](https://medium.com/educa%C3%A7%C3%A3o-fora-da-caixa/matriz-certezas-suposi%C3%A7%C3%B5es-e-d%C3%BAvidas-fa2263633655)
-> - [Brainstorming](https://www.euax.com.br/2018/09/brainstorming/)
+Conforme exposto, o problema que se busca resolver com este projeto é a limitação no sistema de aluguel de veículos atuante hoje no país com confiabilidade, agilidade e praticidade.
 
 ## Objetivos
 
-Aqui você deve descrever os objetivos do trabalho indicando que o objetivo geral é desenvolver um software para solucionar o problema apresentado acima. 
+O objetivo geral deste trabalho é a criação de uma plataforma que apresente ferramentas de fácil uso e que permita o aluguel do veículo particular, assim como também a procura deste para se alugar.
 
-Apresente também alguns (pelo menos 2) objetivos específicos dependendo de onde você vai querer concentrar a sua prática investigativa, ou como você vai aprofundar no seu trabalho.
- 
-> **Links Úteis**:
-> - [Objetivo geral e objetivo específico: como fazer e quais verbos utilizar](https://blog.mettzer.com/diferenca-entre-objetivo-geral-e-objetivo-especifico/)
+Como objetivos específicos, podemos ressaltar:
+Fornecer funcionalidades que permitam o fácil aluguel do veículo;
+Oferecer uma lista de veículos que se encontram na possibilidade de alugar.
+Resolver os trâmites legais com agilidade.
 
 ## Justificativa
 
-Descreva a importância ou a motivação para trabalhar com esta aplicação que você escolheu. Indique as razões pelas quais você escolheu seus objetivos específicos ou as razões para aprofundar em certos aspectos do software.
+Muitas pessoas que possuem um automóvel, não o utilizam todos os dias devido o alto preço dos combustíveis e manutenção, tornando viável o aluguel do mesmo como forma de renda extra.
 
-O grupo de trabalho pode fazer uso de questionários, entrevistas e dados estatísticos, que podem ser apresentados, com o objetivo de esclarecer detalhes do problema que será abordado pelo grupo.
 
-> **Links Úteis**:
-> - [Como montar a justificativa](https://guiadamonografia.com.br/como-montar-justificativa-do-tcc/)
+Por outro lado, existem pessoas que precisam de um carro para lazer ou até mesmo trabalhar, com o valor de carros extremamente alto no brasil, alugar se torna uma excelente alternativa.
+
+
 
 ## Público-Alvo
 
-Os hábitos de consumo mudaram. Tempos extremos exigem opções inovadoras, que significam  novas tendências. Alem das inovações, os consumidores buscam praticidade, agilidade e opções que atendam novos perfis, principalmente mais adequadas ao mundo externo.
-
+Os hábitos de consumo mudaram. Tempos extremos exigem opções inovadoras, que significam novas tendências. Além das inovações, os consumidores buscam praticidade, agilidade e opções que atendam novos perfis, principalmente mais adequadas ao mundo moderno.
 No cenário de aluguel de carros existem dois perfis de pessoas, aquelas que possuem um veículo com pouca frequência de uso e ainda arcam com todos os custos deste mesmo, e aquelas que não o tem e necessitam de alguma forma. Desta forma, este trabalho estabeleceu-se como público-alvo os jovens, adultos e pessoas mais velhas que necessitam de alugar um carro, seja este para trabalho, viagens ou pequenos serviços, e também os proprietários que não usam e podem alugar seu carro em tempo integral.
