@@ -10,15 +10,15 @@ Descrever resumidamente, em um ou dois parágrafos, o projeto que está sendo de
 
 ## Integrantes
 
-Fellipe Pastor
-Lucas Borges 
-Luiz Fellipe Pereira Pires
-João Pedro Pereira Santos 
-Guilherme Gomes
+*Fellipe Pastor
+*Lucas Borges 
+*Luiz Fellipe Pereira Pires
+*João Pedro Pereira Santos 
+*Guilherme Gomes
 
 ## Orientador
 
-* Nome completo do professor 1
+* Nathalia Assis Valentim
 
 ## Instruções de utilização
 
