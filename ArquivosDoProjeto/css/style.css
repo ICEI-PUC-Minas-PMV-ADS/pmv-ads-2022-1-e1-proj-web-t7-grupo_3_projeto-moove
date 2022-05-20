@@ -74,14 +74,6 @@ nav.navbar-transparente {
     margin: 12px 15px ;
 }
 
-#planos {
-    height: 600px;
-    border-bottom: 1px solid gray;
-    background-color: lightgray;
-}
-
-
-
 /* Estrutura de conteúdo
 ----------------------*/   
 #carros-destaque .carousel-item img {
@@ -147,6 +139,76 @@ footer ul li {
 ----------------------*/
 .capa {
     text-align: center;
+}
+
+/*Planos */
+
+#planos {
+    height: 600px;
+    color: #004B34;;
+}
+
+#planos h3 {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1.5em;
+}
+
+#planos .q-esquerdo .q-planos1 h4, #planos .q-esquerdo .q-planos2 h4{
+    color: black;
+}
+
+
+#planos .q-esquerdo .q-planos1, #planos .q-esquerdo .q-planos2 {
+    border: 1px solid #ffc107;
+    background-color: #ffc107;
+    border-radius: 20%;
+    margin: 0 auto;
+    transition: padding 0.4s, background 0.4s;
+}
+
+#planos .q-esquerdo .q-planos1:hover, #planos .q-esquerdo .q-planos2:hover {
+    background-color: #c4960a;
+    padding: 30px;
+    border: none;
+}
+
+#planos .q-esquerdo .texto1 {
+    font-size: 32px;
+    font-weight: 700;
+}
+
+#planos .q-esquerdo .texto2 {
+    font-size: 21px;
+}
+
+#planos .q-esquerdo .q-planos1 span, #planos .q-esquerdo .q-planos2 span {
+    font-weight: 700;
+}
+
+#planos .q-esquerdo .q-planos1 button, #planos .q-esquerdo .q-planos2 button {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+}
+
+#planos .q-esquerdo .q-planos1 img, #planos .q-esquerdo .q-planos2 img {
+    width: 50px;
+}
+
+#planos .q-direito img {
+    width: 40px;
+    margin-bottom: 15px;
+}
+#planos .q-esquerdo .q-planos1, #planos .q-esquerdo .q-planos2 {
+    padding: 20px;
+    align-items: center;
+    text-align: center;
+}
+
+#planos .q-direito p, #planos .q-direito h6 {
+    padding: 5px 0;
+    font-size: 0.9em
 }
 
 
