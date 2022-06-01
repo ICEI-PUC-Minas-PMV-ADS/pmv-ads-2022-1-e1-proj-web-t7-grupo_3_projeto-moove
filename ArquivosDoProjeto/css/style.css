@@ -19,23 +19,6 @@ html, body, #home {
     color: white;
 }
 
-#carros-destaque {
-    background: url("../img/imagem2.jpg") repeat-x;
-    height: 600px;
-    background-size: 50%;
-}
-
-#como-funciona  {   
-    height: 400px;
-}
-
-#como-funciona .duvida-texto {
-    background: url("../img/escritorio.jpg");
-    background-attachment: fixed;
-    background-size:cover;
-    background-position: center;
-}
-
 footer { 
     background: black;
     padding: 50px 0 20px 0;
@@ -45,14 +28,10 @@ footer {
 ----------------------*/
 nav.navbar-transparente {
     background: rgba(0, 0, 0, 0.5);
-    padding: 15px 0;
-    height: 80px;
+    
 }
 
-.navbar-brand {
-    position: absolute;
-    top: 0.5px;
-}
+
 
 .navbar-light .navbar-nav .nav-link {
     color: white;
@@ -76,26 +55,10 @@ nav.navbar-transparente {
 
 /* Carro destaque
 ----------------------*/   
-#carros-destaque h2 {
-    color: white;
-    text-align: center;
-    padding: 20px 0;
-}
-
-#carros-destaque .carousel-item img {
-    width: 600px;
-    margin: 30px auto;
-}
-
-#carros-destaque .carousel-control-next, #carros-destaque .carousel-control-prev {
-    bottom: 200px;
-    opacity: 1;
-    width: 35%;
-}
-
-#carros-destaque .carousel-control-next-icon, #carros-destaque  .carousel-control-prev-icon{
-    width: 40px;
-    height: 40px;
+#servicos {
+    background: url("../img/imagem2.jpg") repeat-x;      
+    margin-bottom: 100px;
+    height: 500px;
 }
 
 /* capa
@@ -121,6 +84,7 @@ nav.navbar-transparente {
     color: black;
 }
 
+
 #planos .q-esquerdo .q-planos1, #planos .q-esquerdo .q-planos2 {
     border: 1px solid #ffc107;
     background-color: #ffc107;
@@ -138,12 +102,6 @@ nav.navbar-transparente {
 #planos .q-esquerdo .texto1 {
     font-size: 32px;
     font-weight: 700;
-}
-
-#planos h3 {
-    text-align: center;
-    text-transform: uppercase;
-    font-size: 1.5em;
 }
 
 #planos .q-esquerdo .texto2 {
@@ -181,14 +139,26 @@ nav.navbar-transparente {
 
 /* Como funciona
 ----------------------*/
-#como-funciona .duvida-texto h4 {
-    text-transform: uppercase;
-    margin-right: 10px;
-    font-weight: 700;
+#como-funciona .duvida-texto  {
+    background: url("../img/escritorio.jpg");
+    background-attachment: fixed;
+    /*background-size:cover;*/
+    background-position: center;
+    display: flex;
+    color: white;
+    
 }
 
-#como-funciona .duvida-texto span {
-    font-size: 0.9em;
+#como-funciona {
+    margin-bottom: 20px;
+}
+
+#como-funciona .duvida-texto h4 {
+    text-transform: uppercase;
+    line-height: 2em;
+    font-weight: 700;
+    margin: 0 auto;
+    padding: 20px 0;
 }
 
 #como-funciona h5 {
@@ -203,40 +173,34 @@ nav.navbar-transparente {
     padding-top: 10px;
 }
 
-#como-funciona {
-    margin-bottom: 20px;
-}
-
-#como-funciona .duvida-texto {
-    padding: 20px 0 20px 400px;  
-    color: white;
-    
-}
 
 /* Depoimentos
 ----------------------*/
-#depoimento h2 {
-    padding: 10px;
-}
-
-#depoimento h3 {
-    margin-bottom: 0;
-}
-
-#depoimento span {
-    font-size: 13px;
-    vertical-align: top;
-    margin-bottom: 10px;
-}
-
 #depoimento {
     margin-top: 30px;
+}
+
+#depoimento h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#depoimento .depoimento-caixa {
+    position: relative;
 }
 
 #depoimento .imagens-depoimento .aspa {
     position: absolute;
     top: 50px;
     left: 210px;
+}
+
+#depoimento h2 {
+    padding: 10px;
+}
+
+#depoimento h3 {
+    margin-bottom: 0;
 }
 
 #depoimento .imagens-depoimento .rosto {
@@ -247,6 +211,12 @@ nav.navbar-transparente {
 #depoimento .depoimento-caixa .depoimento-texto {
     margin-top: 20px;
 }
+
+.caixa { 
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
 
 /* Tipografia
 ----------------------*/
@@ -301,6 +271,10 @@ h3 {
     color: black;
 }
 
+.carousel-control-next, .carousel-control-prev {
+    width: 5%;
+}
+
 /* Footer
 ----------------------*/
 
@@ -334,36 +308,57 @@ footer .navbar-nav a:hover {
 /* Responsividade
 ----------------------*/
 /* Extra small devices (portrait phones, less than 576px)*/
-@media (max-width: 575.98px) {
-    h1 {
-
+@media (max-width: 575.98px) { 
+    .btn-custom {
+        margin: 10px 15px;
     }
-}
-
-/* Small devices (landscape phones, 576px and up)*/
-@media (min-width: 576px) and (max-width: 767.98px) {
-    h1 {
-
+    #servicos {
+        background-size: 90%;
+        height: 370px;
     }
-}
+ }
 
-/* Medium devices (tablets, 768px and up)*/
-@media (min-width: 768px) and (max-width: 991.98px) {
+/* Small devices (landscape phones, less than 768px)*/
+@media (min-width: 576px) and (max-width: 767.98px) { 
     h1 {
-
+        font-size: 3em;
     }
-}
+    .btn-custom {
+        margin: 10px 15px;
+    }
+    #servicos {
+        background-size: 70%;
+    }
+ }
 
-/* Large devices (desktops, 992px and up)*/
-@media (min-width: 992px) and (max-width: 1199.98px) {
+/* Medium devices (tablets, less than 992px)*/
+@media (min-width: 768px) and (max-width: 991.98px) { 
     h1 {
-
+        font-size: 4em;
     }
-}
 
-/* Extra large devices (large desktops, 1200px and up)*/
+    #servicos {
+        background-size: 50%;
+    }
+ }
+
+/* Large devices (desktops, less than 1200px)*/
+@media (min-width: 992px) and (max-width: 1199.98px) { 
+    h1 {
+        font-size: 5em;
+    }
+    #servicos {
+        background-size: 60%;
+    }
+ }
+
+ /* Extra large devices (large desktops)*/
 @media (min-width: 1200px) {
     h1 {
         font-size: 6em;
+    }
+    #servicos {
+        background-size: 40%;
+        height: 600px;
     }
 }
