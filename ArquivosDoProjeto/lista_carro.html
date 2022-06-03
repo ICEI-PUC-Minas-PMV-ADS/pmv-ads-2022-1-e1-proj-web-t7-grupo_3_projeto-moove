@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/dadd5e2854.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/lista-carro.css">
+    <script src="login.js"></script>
+    <title>Moove</title>
+
+</head>
+<body>
+    
+    <!--início cabeçalho-->
+    <header>
+        <nav class="navbar navbar-expand-md navbar-light fixed-top navbar-transparente">
+            <div class="container">
+              
+                
+                <a href="" class="navbar-brand">
+                    <img src="img/logos.png" width="142px">
+                </a>
+
+                <button class="navbar-toggler" data-toggle="collapse" data-target="#nav-principal">
+                    <i class="fas fas-bars"></i>
+                </button>
+
+                <div class="collapse navbar-collapse" id="nav-principal">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#carros-destaque" class="nav-link">Carros Disponíveis</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="" class="nav-link">Sobre a Moove</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#depoimento" class="nav-link">Avaliações</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="" class="nav-link">Como Alugar</a>
+                        </li>
+                        <!-- <li class="nav-item">
+                            <a href="" class="nav-link" id="nomeUsuario">Perfil Usuário</a>
+                        </li> -->
+                        <li class="nav-item divisor"></li>
+                        <li class="nav-item">
+                            <a href="login.html" class="btn btn-outline-warning ml-4">Login</span></a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </nav>
+    </header>
+    <!--fim cabeçalho-->
+    
+    <!--Início Home-->
+    <section id="home">
+        <!--Início lista carro-->
+        <div id="lista-carro">
+            <div class="container">
+                <div class="row">
+                    <div id="btn-pesquisa">
+                        <p>
+                        <a class="btn btn-amarelo" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                            Pesquisar
+                        </a>
+                        </p>
+                        <div class="collapse" id="collapseExample">
+                            <div class="card card-body">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" id="" placeholder="Digite o nome do carro" name="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                    <div id="card-deck-inicio" class="card-deck">
+                        <div class="card bg-light mb-3">
+                            <img src="img/Cruze.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Chevrolet cruze</h5>
+                                <p class="card-text">Design atraente combinado com eficiência. Motor turbo e transmissão automática de 6 velocidades.</p>
+                            </div>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">Volume de carga 290 l</li>
+                                <li class="list-group-item">Potência 153 HP</li>
+                                <li class="list-group-item">Versão LTZ</li>
+                            </ul>
+                            <div class="card-body">
+                                <a href="#" class="btn btn-card btn-sm btn-amarelo">Ver mais</a>
+                            </div>
+                        </div>
+                        <div class="card bg-light mb-3">
+                            <img src="img/car1.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Troller</h5>
+                                <p class="card-text">Beleza, robustez e funcionalidade. O veículo possui amplas dimensões externas, protetor frontal e estribos laterais integrados ao design</p>
+                            </div>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">Motor 3.2L Diesel </li>
+                                <li class="list-group-item">Potência: 200 HP</li>
+                                <li class="list-group-item">Versão T4</li>
+                            </ul>
+                            <div class="card-body">
+                                <a href="info-carro.html" class="btn btn-card btn-sm btn-amarelo">Ver mais</a>
+                            </div>
+                        </div>
+                        <div class="card bg-light mb-3">
+                            <img src="img/car6.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Renault Duster</h5>
+                                <p class="card-text">Moderno por dentro. Painel com computador de bordo</p>
+                            </div>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">Volume de carga: 475 l</li>
+                                <li class="list-group-item">Potência: 170 HP</li>
+                                <li class="list-group-item">Versão Inocic</li>
+                            </ul>
+                            <div class="card-body">
+                                <a href="#" class="btn btn-card btn-sm btn-amarelo">Ver mais</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                 <div class="row">
+                    
+                    <div class="card-deck">
+                        <div class="card bg-light mb-3">
+                            <img src="img/car7.jpg" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                <h5 class="card-title">Toyota Corolla</h5>
+                                <p class="card-text">Carro mais vendido no mundo. Ótima dirigibilidade. Melhor desempenho, conforto e segurança.</p>
+                            </div>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">Volume de carga: 470 l</li>
+                                <li class="list-group-item">Potência: 177 HP</li>
+                                <li class="list-group-item">Versão Gli</li>
+                            </ul>
+                            <div class="card-body">
+                                <a href="#" class="btn btn-card btn-sm btn-amarelo">Ver mais</a>
+                            </div>
+                            </div>
+                        <div class="card bg-light mb-3">
+                            <img src="img/car4.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Hyundai HB 20</h5>
+                                <p class="card-text">Central multimídia flutuante com tela touchscreen de 8 polegadas. Conexão Bluetooth com streaming de áudio.</p>
+                            </div>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">Volume de carga: 350 l</li>
+                                <li class="list-group-item">Potência: 170 HP</li>
+                                <li class="list-group-item">Versão Sense</li>
+                            </ul>
+                            <div class="card-body">
+                                <a href="#" class="btn btn-card btn-sm btn-amarelo "><span>Ver mais</span></a>
+                            </div>
+                        </div>
+                        <div class="card bg-light mb-3">
+                            <img src="img/car10.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">chevrolet celta</h5>
+                                <p class="card-text">Mehor custo-benefício e segurança</p>
+                            </div>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">Volume de carga: 300 l</li>
+                                <li class="list-group-item">Potência: 120 HP</li>
+                                <li class="list-group-item">Versão Lt</li>
+                            </ul>
+                            <div class="card-body">
+                                <a href="#" class="btn btn-card btn-sm btn-amarelo">Ver mais</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+     <!--fim home-->
+    
+    <footer>
+        <div class="container">
+            <div class="row">
+
+                <div class="col-md-2 d-none d-md-block p-1">
+                    <img src="img/logos.png" width="142">
+                </div>
+                <div class="col-md-2">
+                    <h4>texto</h4>
+                    <ul class="navbar-nav">
+                        <li><a href="">Sobre</a></li>
+                        <li><a href="">texto</a></li>
+                        <li><a href="">texto</a></li>
+                        <li><a href="">texto</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-2">
+                    <h4>texto</h4>
+                    <ul class="navbar-nav">
+                        <li><a href="">texto</a></li>
+                        <li><a href="">texto</a></li>
+                        <li><a href="">texto</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-2">
+                    <h4> </h4>
+                    <ul class="navbar-nav">
+                        <li><a href=""></a></li>
+                        <li><a href=""></a></li>
+                        <li><a href=""></a></li>
+                    </ul>
+                </div>
+                <div class="col-md4">
+                    <ul>
+                        <li><a href="">
+                            <img src="img/facebook.png">
+                        </a></li>
+                        <li><a href="">
+                            <img src="img/twitter.png">
+                        </a></li>
+                        <li><a href="">
+                            <img src="img/instagram.png">
+                        </a></li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
+</body>
+</html>
