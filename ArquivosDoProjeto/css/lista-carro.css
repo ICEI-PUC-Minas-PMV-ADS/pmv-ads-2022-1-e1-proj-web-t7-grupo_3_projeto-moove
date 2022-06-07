@@ -37,38 +37,36 @@ footer {
     margin-top: 30px;
 }
 
-#lista-carro #card-deck-inicio {
-    margin-top: 20px;
-}
-
-#lista-carro .btn-card {
-    padding: 0 20px;
-}
-
-#lista-carro h5 {
+#lista-carro h6 {
     text-transform: uppercase;
-    font-weight: 600;
+    font-weight: 900;
+    padding: 10px 0 0 20px;
+    
 }
 
 #lista-carro p {
+    padding: 0 0 0 20px;
     color:  #999999;
 }
 
-#lista-carro ul li {
-    color: #999999;
+#lista-carro .icons {
+    padding-top: 40px;
 }
+
+#lista-carro .icons p {
+    font-weight: 700;
+    color: #999999;
+    padding-right: 20px;
+}
+
 
 #lista-carro #btn-pesquisa {
     position: relative;
 }
 
-#lista-carro #btn-pesquisa p {
+#lista-carro #btn-pesquisa a {
     position: absolute;
-    top: -40px;
-}
-
-#lista-carro #btn-pesquisa .card-body {
-    width: 400px;
+    top: -45px;
 }
 
 
