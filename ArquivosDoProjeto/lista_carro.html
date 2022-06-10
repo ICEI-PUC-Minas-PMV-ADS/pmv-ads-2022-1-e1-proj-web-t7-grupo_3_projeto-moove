@@ -1,25 +1,51 @@
 <!DOCTYPE html>
 <html lang="pt">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+        integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/dadd5e2854.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/lista-carro.css">
     <script src="login.js"></script>
+    <script src="cadastroCarro.js"></script>
     <title>Moove</title>
+    <script>
+        function initPage() {
 
+            debugger
+            // Associa a função de logout ao botão
+            //document.getElementById('btn_logout').addEventListener('click', logoutUser);
+
+            // Informa o nome do usuário logado
+
+            if (typeof usuarioCorrente.nome != "undefined") {
+                document.getElementById('nomeUsuario').innerHTML = usuarioCorrente.nome;
+            }
+            else {
+
+                document.getElementById('nomeUsuario').innerHTML = 'Logar';
+            }
+
+            // Lista os usuários 
+            //exibeUsuarios ();
+        }
+
+        window.addEventListener('load', initPage);
+    </script>
 </head>
-<body>
-    
+
+<body onload="init()">
+
     <!--início cabeçalho-->
     <header>
         <nav class="navbar navbar-expand-md navbar-light fixed-top navbar-transparente">
             <div class="container">
-              
-                
-                <a href="" class="navbar-brand">
+
+
+                <a href="index.html" class="navbar-brand">
                     <img src="img/logos.png" width="142px">
                 </a>
 
@@ -30,23 +56,23 @@
                 <div class="collapse navbar-collapse" id="nav-principal">
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item">
-                            <a href="#carros-destaque" class="nav-link">Carros Disponíveis</a>
+                            <a href="" class="nav-link">Carros Disponíveis</a>
                         </li>
                         <li class="nav-item">
-                            <a href="" class="nav-link">Sobre a Moove</a>
+                            <a href="index.html#planos" class="nav-link">Sobre a Moove</a>
                         </li>
                         <li class="nav-item">
-                            <a href="#depoimento" class="nav-link">Avaliações</a>
+                            <a href="index.html#depoimento" class="nav-link">Avaliações</a>
                         </li>
                         <li class="nav-item">
                             <a href="" class="nav-link">Como Alugar</a>
                         </li>
                         <!-- <li class="nav-item">
-                            <a href="" class="nav-link" id="nomeUsuario">Perfil Usuário</a>
-                        </li> -->
+                                <a href="" class="nav-link" id="nomeUsuario">Perfil Usuário</a>
+                            </li> -->
                         <li class="nav-item divisor"></li>
                         <li class="nav-item">
-                            <a href="login.html" class="btn btn-outline-warning ml-4">Login</span></a>
+                            <a href="login.html" class="btn btn-outline-warning ml-4"><span id="nomeUsuario"></span></a>
                         </li>
                     </ul>
                 </div>
@@ -55,7 +81,7 @@
         </nav>
     </header>
     <!--fim cabeçalho-->
-    
+
     <!--Início Home-->
     <section id="home">
         <!--Início lista carro-->
@@ -64,375 +90,31 @@
                 <div class="row">
                     <div id="btn-pesquisa">
                         <p>
-                        <a class="btn btn-amarelo" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
-                            Pesquisar
-                        </a>
+                            <a class="btn btn-amarelo" data-toggle="collapse" href="#collapseExample" role="button"
+                                aria-expanded="false" aria-controls="collapseExample">
+                                Pesquisar
+                            </a>
                         </p>
                         <div class="collapse" id="collapseExample">
                             <div class="card card-body">
                                 <div class="form-group">
-                                    <input type="text" class="form-control" id="" placeholder="Digite o nome do carro" name="">
+                                    <input type="text" class="form-control" id="" placeholder="Digite o nome do carro"
+                                        name="">
                                 </div>
                             </div>
                         </div>
                     </div>
+                    <div id="tabela-carros">
 
-                    <div class="card mb-4 bg-light" >
-                        <div class="row no-gutters">
-                            <div class="col-md-4">
-                                <img src="img/Cruze.jpg" class="img-fluid">
-                            </div>
-                            <div class="col-md-8">
-                                <div class="card-body">
-                                    <div>
-                                        <h6 class="card-title">CRUZE</h6>
-                                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce varius auctor turpis et fringilla. consectetur adipiscing elit.</p>
-                                    </div>
-                                    <div class="d-flex justify-content-between">
-                                        <div class="d-flex icons">
-                                            <p><img src="img/quilometragem.png">    15.000</p>
 
-                                            <p><img src="img/gasolina.png">    FLEX</p>
-
-                                            <p><img src="img/assento.png">    5</p>
-
-                                            <p><img src="img/motor.png">    MOTOR 2.0</p>
-                                            
-                                        </div>
-                                        
-
-                                        <div class="btn-ver_mais">
-                                            <button type="button" class="btn btn-amarelo">Ver mais</button>
-                                        </div>
-
-                                    </div>
-                                    
-                                </div>
-                            </div>
-                        </div>
                     </div>
 
-                    <div class="card mb-4 bg-light" >
-                        <div class="row no-gutters">
-                            <div class="col-md-4">
-                                <img src="img/car1.jpg" class="img-fluid" style="width: 380px; height: 230px;">
-                            </div>
-                            <div class="col-md-8">
-                                <div class="card-body">
-                                    <div>
-                                        <h6 class="card-title">TROLLER</h6>
-                                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce varius auctor turpis et fringilla. consectetur adipiscing elit.</p>
-                                    </div>
-                                    <div class="d-flex justify-content-between">
-                                        <div class="d-flex icons">
-                                            <p><img src="img/quilometragem.png">    15.000</p>
-
-                                            <p><img src="img/gasolina.png">    FLEX</p>
-
-                                            <p><img src="img/assento.png">    5</p>
-
-                                            <p><img src="img/motor.png">    MOTOR 2.0</p>
-                                            
-                                        </div>
-                                        
-
-                                        <div class="btn-ver_mais">
-                                            <button type="button" class="btn btn-amarelo">Ver mais</button>
-                                        </div>
-
-                                    </div>
-                                    
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="card mb-4 bg-light" >
-                        <div class="row no-gutters">
-                            <div class="col-md-4">
-                                <img src="img/car4.jpg" class="img-fluid" style="width: 380px; height: 230px;">
-                            </div>
-                            <div class="col-md-8">
-                                <div class="card-body">
-                                    <div>
-                                        <h6 class="card-title">HB 20</h6>
-                                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce varius auctor turpis et fringilla. consectetur adipiscing elit.</p>
-                                    </div>
-                                    <div class="d-flex justify-content-between">
-                                        <div class="d-flex icons">
-                                            <p><img src="img/quilometragem.png">    15.000</p>
-
-                                            <p><img src="img/gasolina.png">    FLEX</p>
-
-                                            <p><img src="img/assento.png">    5</p>
-
-                                            <p><img src="img/motor.png">    MOTOR 2.0</p>
-                                            
-                                        </div>
-                                        
-
-                                        <div class="btn-ver_mais">
-                                            <button type="button" class="btn btn-amarelo">Ver mais</button>
-                                        </div>
-
-                                    </div>
-                                    
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="card mb-4 bg-light" >
-                        <div class="row no-gutters">
-                            <div class="col-md-4">
-                                <img src="img/car6.jpg" class="img-fluid" style="width: 380px; height: 230px;">
-                            </div>
-                            <div class="col-md-8">
-                                <div class="card-body">
-                                    <div>
-                                        <h6 class="card-title">DUSTER</h6>
-                                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce varius auctor turpis et fringilla. consectetur adipiscing elit.</p>
-                                    </div>
-                                    <div class="d-flex justify-content-between">
-                                        <div class="d-flex icons">
-                                            <p><img src="img/quilometragem.png">    15.000</p>
-
-                                            <p><img src="img/gasolina.png">    FLEX</p>
-
-                                            <p><img src="img/assento.png">    5</p>
-
-                                            <p><img src="img/motor.png">    MOTOR 2.0</p>
-                                            
-                                        </div>
-                                        
-
-                                        <div class="btn-ver_mais">
-                                            <button type="button" class="btn btn-amarelo">Ver mais</button>
-                                        </div>
-
-                                    </div>
-                                    
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="card mb-4 bg-light" >
-                        <div class="row no-gutters">
-                            <div class="col-md-4">
-                                <img src="img/car7.jpg" class="img-fluid" style="width: 380px; height: 230px;">
-                            </div>
-                            <div class="col-md-8">
-                                <div class="card-body">
-                                    <div>
-                                        <h6 class="card-title">COROLLA</h6>
-                                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce varius auctor turpis et fringilla. consectetur adipiscing elit.</p>
-                                    </div>
-                                    <div class="d-flex justify-content-between">
-                                        <div class="d-flex icons">
-                                            <p><img src="img/quilometragem.png">    15.000</p>
-
-                                            <p><img src="img/gasolina.png">    FLEX</p>
-
-                                            <p><img src="img/assento.png">    5</p>
-
-                                            <p><img src="img/motor.png">    MOTOR 2.0</p>
-                                            
-                                        </div>
-                                        
-
-                                        <div class="btn-ver_mais">
-                                            <button type="button" class="btn btn-amarelo">Ver mais</button>
-                                        </div>
-
-                                    </div>
-                                    
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="card mb-4 bg-light" >
-                        <div class="row no-gutters">
-                            <div class="col-md-4">
-                                <img src="img/car10.jpg" class="img-fluid" style="width: 380px; height: 230px;">
-                            </div>
-                            <div class="col-md-8">
-                                <div class="card-body">
-                                    <div>
-                                        <h6 class="card-title">CELTA</h6>
-                                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce varius auctor turpis et fringilla. consectetur adipiscing elit.</p>
-                                    </div>
-                                    <div class="d-flex justify-content-between">
-                                        <div class="d-flex icons">
-                                            <p><img src="img/quilometragem.png">    15.000</p>
-
-                                            <p><img src="img/gasolina.png">    FLEX</p>
-
-                                            <p><img src="img/assento.png">    5</p>
-
-                                            <p><img src="img/motor.png">    MOTOR 2.0</p>
-                                            
-                                        </div>
-                                        
-
-                                        <div class="btn-ver_mais">
-                                            <button type="button" class="btn btn-amarelo">Ver mais</button>
-                                        </div>
-
-                                    </div>
-                                    
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="card mb-4 bg-light" >
-                        <div class="row no-gutters">
-                            <div class="col-md-4">
-                                <img src="img/car12.jpg" class="img-fluid" style="width: 380px; height: 230px;">
-                            </div>
-                            <div class="col-md-8">
-                                <div class="card-body">
-                                    <div>
-                                        <h6 class="card-title">GOL</h6>
-                                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce varius auctor turpis et fringilla. consectetur adipiscing elit.</p>
-                                    </div>
-                                    <div class="d-flex justify-content-between">
-                                        <div class="d-flex icons">
-                                            <p><img src="img/quilometragem.png">    15.000</p>
-
-                                            <p><img src="img/gasolina.png">    FLEX</p>
-
-                                            <p><img src="img/assento.png">    5</p>
-
-                                            <p><img src="img/motor.png">    MOTOR 2.0</p>
-                                            
-                                        </div>
-                                        
-
-                                        <div class="btn-ver_mais">
-                                            <button type="button" class="btn btn-amarelo">Ver mais</button>
-                                        </div>
-
-                                    </div>
-                                    
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="card mb-4 bg-light" >
-                        <div class="row no-gutters">
-                            <div class="col-md-4">
-                                <img src="img/car13.jpg" class="img-fluid" style="width: 380px; height: 230px;">
-                            </div>
-                            <div class="col-md-8">
-                                <div class="card-body">
-                                    <div>
-                                        <h6 class="card-title">GOL</h6>
-                                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce varius auctor turpis et fringilla. consectetur adipiscing elit.</p>
-                                    </div>
-                                    <div class="d-flex justify-content-between">
-                                        <div class="d-flex icons">
-                                            <p><img src="img/quilometragem.png">    15.000</p>
-
-                                            <p><img src="img/gasolina.png">    FLEX</p>
-
-                                            <p><img src="img/assento.png">    5</p>
-
-                                            <p><img src="img/motor.png">    MOTOR 2.0</p>
-                                            
-                                        </div>
-                                        
-
-                                        <div class="btn-ver_mais">
-                                            <button type="button" class="btn btn-amarelo">Ver mais</button>
-                                        </div>
-
-                                    </div>
-                                    
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="card mb-4 bg-light" >
-                        <div class="row no-gutters">
-                            <div class="col-md-4">
-                                <img src="img/car14.jpg" class="img-fluid" style="width: 380px; height: 230px;">
-                            </div>
-                            <div class="col-md-8">
-                                <div class="card-body">
-                                    <div>
-                                        <h6 class="card-title">SIENA</h6>
-                                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce varius auctor turpis et fringilla. consectetur adipiscing elit.</p>
-                                    </div>
-                                    <div class="d-flex justify-content-between">
-                                        <div class="d-flex icons">
-                                            <p><img src="img/quilometragem.png">    15.000</p>
-
-                                            <p><img src="img/gasolina.png">    FLEX</p>
-
-                                            <p><img src="img/assento.png">    5</p>
-
-                                            <p><img src="img/motor.png">    MOTOR 2.0</p>
-                                            
-                                        </div>
-                                        
-
-                                        <div class="btn-ver_mais">
-                                            <button type="button" class="btn btn-amarelo">Ver mais</button>
-                                        </div>
-
-                                    </div>
-                                    
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="card mb-4 bg-light" >
-                        <div class="row no-gutters">
-                            <div class="col-md-4">
-                                <img src="img/car15.jpg" class="img-fluid" style="width: 380px; height: 230px;">
-                            </div>
-                            <div class="col-md-8">
-                                <div class="card-body">
-                                    <div>
-                                        <h6 class="card-title">TORO</h6>
-                                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce varius auctor turpis et fringilla. consectetur adipiscing elit.</p>
-                                    </div>
-                                    <div class="d-flex justify-content-between">
-                                        <div class="d-flex icons">
-                                            <p><img src="img/quilometragem.png">    15.000</p>
-
-                                            <p><img src="img/gasolina.png">    FLEX</p>
-
-                                            <p><img src="img/assento.png">    5</p>
-
-                                            <p><img src="img/motor.png">    MOTOR 2.0</p>
-                                            
-                                        </div>
-                                        
-
-                                        <div class="btn-ver_mais">
-                                            <button type="button" class="btn btn-amarelo">Ver mais</button>
-                                        </div>
-
-                                    </div>
-                                    
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>      
+                </div>
             </div>
         </div>
     </section>
-     <!--fim home-->
-    
+    <!--fim home-->
+
     <footer>
         <div class="container">
             <div class="row">
@@ -468,14 +150,14 @@
                 <div class="col-md4">
                     <ul>
                         <li><a href="">
-                            <img src="img/facebook.png">
-                        </a></li>
+                                <img src="img/facebook.png">
+                            </a></li>
                         <li><a href="">
-                            <img src="img/twitter.png">
-                        </a></li>
+                                <img src="img/twitter.png">
+                            </a></li>
                         <li><a href="">
-                            <img src="img/instagram.png">
-                        </a></li>
+                                <img src="img/instagram.png">
+                            </a></li>
                     </ul>
                 </div>
 
@@ -484,7 +166,66 @@
     </footer>
 
 
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF"
+        crossorigin="anonymous"></script>
+
+     
+    <script>
+        function exibeCarros() {
+            // Remove todas as linhas do corpo da tabela
+            $("#tabela-carros").html("");
+
+            // Popula a tabela com os registros do banco de dados
+            for (i = 0; i < db_carros.carros.length; i++) {
+                let carro = db_carros.carros[i];
+                debugger
+                document.getElementById("tabela-carros").innerHTML += `
+                    <div class="card mb-4 bg-light" >
+                        <div class="row no-gutters">
+                            <div class="col-md-4">
+                                <img src="${carro.imagem}" class="img-fluid">
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <div>
+                                        <h6 class="card-title">${carro.nomeCarro}</h6>
+                                        <p class="card-text">${carro.descricao}</p>
+                                    </div>
+                                    <div class="d-flex justify-content-between">
+                                        <div class="d-flex icons">
+                                            <p><img src="img/quilometragem.png">    ${carro.km}</p>
+
+                                            <p><img src="img/gasolina.png">    ${carro.flex}</p>
+
+                                            <p><img src="img/assento.png">    ${carro.lugares}</p>
+
+                                            <p><img src="img/motor.png">    MOTOR ${carro.motor}</p>
+
+                                        </div>
+
+
+                                        <div class="btn-ver_mais">
+                                            <a href="info-carro.html?id=${carro.id}"> <button type="button" class="btn btn-amarelo">Ver mais</button></a>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>`
+             }
+        }
+
+        function init() {
+            exibeCarros();
+        }
+    </script>
+
 </body>
+
 </html>
