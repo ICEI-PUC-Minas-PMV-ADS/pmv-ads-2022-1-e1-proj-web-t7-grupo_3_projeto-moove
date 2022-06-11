@@ -4,11 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
         integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/dadd5e2854.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="css/lista-carro.css">
+    <link rel="stylesheet" href="css/info-carro.css">
+    <link rel="stylesheet" href="css/cadastrarCarro.css">
     <script src="login.js"></script>
     <script src="cadastroCarro.js"></script>
     <title>Moove</title>
@@ -16,20 +17,6 @@
         // Verifica se o usuário já esta logado e se negativo, redireciona para tela de login        
         // if (!usuarioCorrente.login) {
         //     window.location.href = LOGIN_URL;
-        // }
-
-        // function exibeUsuarios() {
-
-        //     // Popula a tabela com os registros do banco de dados
-        //     let listaUsuarios = '';
-        //     for (i = 0; i < db_usuarios.usuarios.length; i++) {
-        //         let usuario = db_usuarios.usuarios[i];
-        //         listaUsuarios += `<tr><td scope="row">${usuario.nome}</td><td>${usuario.login}</td><td>${usuario.email}</td></tr>`;
-        //     }
-
-        //     // Substitui as linhas do corpo da tabela
-        //     document.getElementById("table-usuarios").innerHTML = listaUsuarios
-
         // }
 
         function initPage() {
@@ -40,6 +27,7 @@
 
             // Informa o nome do usuário logado
 
+            
             if (typeof usuarioCorrente.nome != "undefined") {
                 document.getElementById('nomeUsuario').innerHTML = usuarioCorrente.nome;
                 document.getElementById('cadastrarCarro').hidden = false;
@@ -47,10 +35,10 @@
             else {
                 document.getElementById('cadastrarCarro').hidden = true;
                 document.getElementById('nomeUsuario').innerHTML = 'Logar';
+                alert("Você precisa estar logado para cadastrar um carro")
+                window.location.href = "index.html"
             }
-            
-            // Lista os usuários 
-            //exibeUsuarios ();
+
         }
         function  verificarLogadoCadastro()
         {
@@ -71,7 +59,6 @@
 
 <body onload="init()">
 
-    <!--início cabeçalho-->
     <header>
         <nav class="navbar navbar-expand-md navbar-light fixed-top navbar-transparente">
             <div class="container">
@@ -88,7 +75,7 @@
                 <div class="collapse navbar-collapse" id="nav-principal">
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item">
-                            <a href="" class="nav-link">Carros Disponíveis</a>
+                            <a href="lista_carro.html" class="nav-link">Carros Disponíveis</a>
                         </li>
                         <li class="nav-item">
                             <a href="index.html#planos" class="nav-link">Sobre a Moove</a>
@@ -114,44 +101,80 @@
     </header>
     <!--fim cabeçalho-->
 
-    <!--Início Home-->
     <section id="home">
-        <!--Início lista carro-->
-        <div id="lista-carro">
-            <div class="container">
-                <div class="row">
-                    <div id="btn-pesquisa">
-                        <p>
-                            <a class="btn btn-amarelo" data-toggle="collapse" href="#collapseExample" role="button"
-                                aria-expanded="false" aria-controls="collapseExample">
-                                Pesquisar
-                            </a>
-                        </p>
-                        <div class="collapse" id="collapseExample">
-                            <div class="card card-body">
-                                <div class="form-group">
-                                    <input type="text" class="form-control" id="" placeholder="Digite o nome do carro"
-                                        name="">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div id="tabela-carros">
-
-
-                    </div>
-
+        <form id="form-carro">
+            <div class="form-group row">
+                <div class="col-sm-4">
+                    <label for="inputId">Descricao</label>
+                    <input type="text" class="form-control" id="inputDescricao" placeholder="Descrição">
+                </div>
+                <div class="col-sm-8">
+                    <label for="inputNome">Nome (*)</label>
+                    <input type="text" class="form-control" id="inputNome" required placeholder="Informe o nome do contato">
                 </div>
             </div>
-        </div>
+            <div class="form-group row">
+                <div class="col-sm-5">
+                    <label for="inputTelefone">Kilometragem (*)</label>
+                    <input type="number" class="form-control" id="inputKilometragem" required placeholder="Kilometragem">
+                </div>
+                <div class="col-sm-7">
+                    <label for="inputEmail">Lugares (*)</label>
+                    <input type="number" class="form-control" id="inputLugares" required placeholder="Informe a quantidade de lugares">
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-sm-6">
+                    <label for="inputCidade">Motor</label>
+                    <input type="text" class="form-control" id="inputMotor" placeholder="Informe o motor" >
+                </div>
+                <div class="col-sm-6">
+                    <label for="inputCategoria">Categoria</label>
+                    <input type="text" class="form-control" id="inputCategoria" required placeholder="Informe a categoria do carro">
+                </div>
+            </div>
+            <div class="form-group row">    
+                <div class="col-sm-12">
+                    <label for="inputSite">Ano</label>
+                    <input type="number" class="form-control" id="inputAno" required placeholder="Informe o Ano do Carro">
+                </div>
+                <div class="col-sm-12">
+                    <label for="inputSite">Flex:</label>
+                    <br>
+                    <label id="check" for="inputSite">Sim</label>
+                    <input type="radio" name="flex"  value="true"/>
+                    <label id="check" for="inputSite">Não</label>
+                    <input type="radio" name="flex"  value="false"/>
+                </div>
+            </div>
+            <div class="form-group row">    
+                <div class="col-sm-12">
+                    <label for="inputSite">Cor</label>
+                    <input type="text" class="form-control" id="inputCor" required placeholder="Informe a cor do carro">
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-sm-4">
+                    <small>(*) Campos obrigatórios</small>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-sm-12">
+                    <input type="button" class="btn btn-success" id="btnInsert" value="Inserir">
+                    <input type="button" class="btn btn-secondary" id="btnClear" value="Limpar Formulario">
+                    <a href="lista_carro.html"><input type="button" class="btn btn-warning" id="btnClear" value="Carros Disponiveis"></a>
+                </div>
+            </div>
+        </form>
     </section>
     <!--fim home-->
+
 
     <footer>
         <div class="container">
             <div class="row">
 
-                <div class="col-md-2 d-none d-md-block p-1">
+                <div class="col-md-2">
                     <img src="img/logos.png" width="142">
                 </div>
                 <div class="col-md-2">
@@ -197,7 +220,6 @@
         </div>
     </footer>
 
-
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
         crossorigin="anonymous"></script>
@@ -205,58 +227,54 @@
         integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF"
         crossorigin="anonymous"></script>
 
-     
     <script>
-        function exibeCarros() {
-            // Remove todas as linhas do corpo da tabela
-            $("#tabela-carros").html("");
-
-            // Popula a tabela com os registros do banco de dados
-            for (i = 0; i < db_carros.carros.length; i++) {
-                let carro = db_carros.carros[i];
-                debugger
-                document.getElementById("tabela-carros").innerHTML += `
-                    <div class="card mb-4 bg-light" >
-                        <div class="row no-gutters">
-                            <div class="col-md-4">
-                                <img src="${carro.imagem}" class="img-fluid">
-                            </div>
-                            <div class="col-md-8">
-                                <div class="card-body">
-                                    <div>
-                                        <h6 class="card-title">${carro.nomeCarro}</h6>
-                                        <p class="card-text">${carro.descricao}</p>
-                                    </div>
-                                    <div class="d-flex justify-content-between">
-                                        <div class="d-flex icons">
-                                            <p><img src="img/quilometragem.png">    ${carro.km}</p>
-
-                                            <p><img src="img/gasolina.png">    ${carro.flex}</p>
-
-                                            <p><img src="img/assento.png">    ${carro.lugares}</p>
-
-                                            <p><img src="img/motor.png">    MOTOR ${carro.motor}</p>
-
-                                        </div>
-
-
-                                        <div class="btn-ver_mais">
-                                            <a href="info-carro.html?id=${carro.id}"> <button type="button" class="btn btn-amarelo">Ver mais</button></a>
-                                        </div>
-
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
-                    </div>`
-             }
-        }
 
         function init() {
-            exibeCarros();
+            // Adiciona funções para tratar os eventos 
+            $("#btnInsert").click(function () {
+                debugger
+                // Verfica se o formulário está preenchido corretamente
+                if (!$('#form-carro')[0].checkValidity()) {
+                    alerta("Preencha o formulário corretamente.");
+                    return;
+                }
+
+                // Obtem os valores dos campos do formulário
+                let campoNome = $("#inputNome").val();
+                let campoFlex = document.querySelector('input[name="flex"]:checked').value;
+                let campoDescricao = $("#inputDescricao").val();
+                let campoKilometragem = $('#inputKilometragem').val();
+                let campoLugares = $("#inputLugares").val();
+                let campoMotor = $('#inputMotor').val();
+                let campoCategoria = $('#inputCategoria').val();
+                let campoAno = $('#inputAno').val();
+                let campoCor = $('#inputCor').val();
+                let carro = { 
+                    nomeCarro: campoNome, 
+                    flex: campoFlex,
+                    descricao: campoDescricao, 
+                    km: campoKilometragem, 
+                    lugares: campoLugares, 
+                    motor: campoMotor,
+                    categoria: campoCategoria,
+                    ano: campoAno,
+                    cor: campoCor };
+
+
+                insertCarro(carro);
+
+                // Limpa o formulario
+                $("#form-carro")[0].reset();
+            });
+
+            // Intercepta o click do botão Listar Contatos
+            $("#btnClear").click(function () {
+                $("#form-carro")[0].reset();
+            });
         }
+
     </script>
+
 
 </body>
 

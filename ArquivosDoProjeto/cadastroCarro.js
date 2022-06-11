@@ -2,7 +2,7 @@
 var db_carros = {
     "carros": [
         {
-            "id": 1,
+            "id": 0,
             "imagem": "img/Cruze.jpg",
             "nomeCarro": "Cruze",
             "descricao": "Cruze 2020, 5 portas, flex, 1.8",
@@ -16,7 +16,7 @@ var db_carros = {
             "cor": "cinza"
         },
         {
-            "id": 2,
+            "id": 1,
             "imagem": "img/car7.jpg",
             "nomeCarro": "COROLLA",
             "descricao": "COROLLA 2020, 4 portas, flex, 1.8",
@@ -43,4 +43,31 @@ function displayMessage(msg) {
     $('#msg').html('<div class="alert alert-warning">' + msg + '</div>');
 }
 
+
+function insertCarro(carro) {
+    debugger
+    let novoId = 1;
+    if (db.carros.length != 0) 
+      novoId = db.carros[db.carros.length - 1].id + 1;
+    let novoCarro = {
+        "id": novoId,
+        "nomeCarro": carro.nomeCarro,
+        "descricao" : carro.descricao,
+        "km": carro.km,
+        "flex" : carro.flex,
+        "lugares": carro.lugares,
+        "motor": carro.motor,
+        "categoria": carro.categoria,
+        "condicao": carro.condicao,
+        "ano": carro.ano,
+        "cor": carro.cor
+    };
+
+    // Insere o novo objeto no array
+    db.carros.push(novoCarro);
+    displayMessage("Carro inserido com sucesso");
+
+    // Atualiza os dados no Local Storage
+    localStorage.setItem('db_carros', JSON.stringify(db));
+}
 

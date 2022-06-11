@@ -11,8 +11,27 @@
     <link rel="stylesheet" href="css/info-carro.css">
     <script src="login.js"></script>
     <script src="cadastroCarro.js"></script>
-    <title>Document</title>
+    <title>Moove</title>
     <script>
+        // Verifica se o usuário já esta logado e se negativo, redireciona para tela de login        
+        // if (!usuarioCorrente.login) {
+        //     window.location.href = LOGIN_URL;
+        // }
+
+        // function exibeUsuarios() {
+
+        //     // Popula a tabela com os registros do banco de dados
+        //     let listaUsuarios = '';
+        //     for (i = 0; i < db_usuarios.usuarios.length; i++) {
+        //         let usuario = db_usuarios.usuarios[i];
+        //         listaUsuarios += `<tr><td scope="row">${usuario.nome}</td><td>${usuario.login}</td><td>${usuario.email}</td></tr>`;
+        //     }
+
+        //     // Substitui as linhas do corpo da tabela
+        //     document.getElementById("table-usuarios").innerHTML = listaUsuarios
+
+        // }
+
         function initPage() {
 
             debugger
@@ -23,16 +42,29 @@
 
             if (typeof usuarioCorrente.nome != "undefined") {
                 document.getElementById('nomeUsuario').innerHTML = usuarioCorrente.nome;
+                document.getElementById('cadastrarCarro').hidden = false;
             }
             else {
-
+                document.getElementById('cadastrarCarro').hidden = true;
                 document.getElementById('nomeUsuario').innerHTML = 'Logar';
             }
-
+            
             // Lista os usuários 
             //exibeUsuarios ();
         }
-
+        function  verificarLogadoCadastro()
+        {
+            debugger
+            if (typeof usuarioCorrente.nome == "undefined") 
+            {
+                alert("Favor logar");
+                window.location.href = 'login.html';
+            }
+            else
+                window.location.href = 'cadastroCarro.html';
+            
+            
+        }
         window.addEventListener('load', initPage);
     </script>
 </head>
@@ -58,14 +90,17 @@
                             <a href="lista_carro.html" class="nav-link">Carros Disponíveis</a>
                         </li>
                         <li class="nav-item">
-                            <a href="#planos" class="nav-link">Sobre a Moove</a>
+                            <a href="index.html#planos" class="nav-link">Sobre a Moove</a>
                         </li>
                         <li class="nav-item">
-                            <a href="#depoimento" class="nav-link">Avaliações</a>
+                            <a href="index.html#depoimento" class="nav-link">Avaliações</a>
                         </li>
                         <li class="nav-item">
-                            <a href="" class="nav-link">Como Alugar</a>
+                            <a href="cadastrarCarro.html" id="cadastrarCarro" class="nav-link">Cadastre seu Carro</a>
                         </li>
+                        <!-- <li class="nav-item">
+                                <a href="" class="nav-link" id="nomeUsuario">Perfil Usuário</a>
+                            </li> -->
                         <li class="nav-item divisor"></li>
                         <li class="nav-item">
                             <a href="login.html" class="btn btn-outline-warning ml-4"><span id="nomeUsuario"></span></a>
@@ -154,10 +189,15 @@
         {
             const queryString = window.location.search;
             const urlParams = new URLSearchParams(queryString);
-   debugger
-            var carro = db_carros.carros.find(x => {
+            debugger
+            var carro = db.carros.find(x => {
                 return x.id == urlParams.get('id')
             } )
+            if(!carro)
+            {
+                alert("Selecione um carro")
+                window.location.href = "lista_carro.html"
+            }
 
             document.getElementById('home').innerHTML = `        <!--Início Home-->
         <div id="info-carro">

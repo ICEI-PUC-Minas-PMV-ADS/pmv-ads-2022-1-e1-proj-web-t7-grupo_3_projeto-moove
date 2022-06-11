@@ -55,8 +55,7 @@ nav.navbar-transparente {
 ----------------------*/   
 #servicos {
     background: url("../img/imagem2.jpg") repeat-x;      
-    margin-bottom: 100px;
-    height: 500px;
+    height: 450px;
 }
 
 #servicos img {
@@ -72,7 +71,7 @@ nav.navbar-transparente {
 /*Planos */
 
 #planos {
-    height: 600px;
+    height: 500px;
     color: #004B34;;
 }
 
@@ -189,8 +188,8 @@ nav.navbar-transparente {
 }
 
 .caixa { 
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
 }
 
 
@@ -303,7 +302,7 @@ footer .navbar-nav a:hover {
         margin: 10px 15px;
     }
     #servicos {
-        background-size: 70%;
+        background-size: 90%;
     }
  }
 
@@ -314,7 +313,7 @@ footer .navbar-nav a:hover {
     }
 
     #servicos {
-        background-size: 50%;
+        background-size: 90%;
     }
  }
 
@@ -324,7 +323,7 @@ footer .navbar-nav a:hover {
         font-size: 5em;
     }
     #servicos {
-        background-size: 60%;
+        background-size: 90%;
     }
  }
 

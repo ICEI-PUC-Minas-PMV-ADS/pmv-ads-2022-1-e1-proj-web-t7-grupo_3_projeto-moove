@@ -41,16 +41,29 @@
 
             if (typeof usuarioCorrente.nome != "undefined") {
                 document.getElementById('nomeUsuario').innerHTML = usuarioCorrente.nome;
+                document.getElementById('cadastrarCarro').hidden = false;
             }
             else {
-
+                document.getElementById('cadastrarCarro').hidden = true;
                 document.getElementById('nomeUsuario').innerHTML = 'Logar';
             }
-
+            
             // Lista os usuários 
             //exibeUsuarios ();
         }
-
+        function  verificarLogadoCadastro()
+        {
+            debugger
+            if (typeof usuarioCorrente.nome == "undefined") 
+            {
+                alert("Favor logar");
+                window.location.href = 'login.html';
+            }
+            else
+                window.location.href = 'cadastroCarro.html';
+            
+            
+        }
         window.addEventListener('load', initPage);
     </script>
 </head>
@@ -83,7 +96,7 @@
                             <a href="#depoimento" class="nav-link">Avaliações</a>
                         </li>
                         <li class="nav-item">
-                            <a href="" class="nav-link">Como Alugar</a>
+                            <a href="cadastrarCarro.html" id="cadastrarCarro" class="nav-link">Cadastre seu Carro</a>
                         </li>
                         <!-- <li class="nav-item">
                                 <a href="" class="nav-link" id="nomeUsuario">Perfil Usuário</a>
@@ -112,17 +125,17 @@
 
                             <div class="carousel-item active">
                                 <h1>O melhor jeito de se alugar um carro</h1>
-                                <button type="button" class="btn btn-custom btn-lg btn-amarelo">
+                                <a href="#planos"><button type="button" class="btn btn-custom btn-lg btn-amarelo">
                                     Veja como
-                                </button>
-                                <button type="button" class="btn btn-custom btn-lg btn-branco">
+                                </button></a>
+                                <a href="lista_carro.html"><button type="button" class="btn btn-custom btn-lg btn-branco">
                                     Carros Disponíveis
-                                </button>
+                                </button></a>
                             </div>
                             <div class="carousel-item">
                                 <h1>Alugue Agora <br> e descubra</h1>
-                                <button type="button" class="btn btn-custom btn-lg btn-amarelo">
-                                    <i class="fa-solid fa-car"></i> Cadastre
+                                <button type="button" onclick="verificarLogadoCadastro()" class="btn btn-custom btn-lg btn-amarelo">
+                                    <i class="fa-solid fa-car"></i>    Cadastre
                                 </button>
                             </div>
 
@@ -253,49 +266,7 @@
         </div>
         </div>
     </section>
-    <!--fim planos-->
     <!-- Fim Planos -->
-
-    <!--inicio como funciona-->
-    <section id="como-funciona" class="caixa">
-        <div class="duvida-texto">
-            <h4 class="text-center ">Dúvidas? Veja como funciona</h4>
-        </div>
-        <div class="container">
-
-            <div class="row">
-                <div class="col-md-4">
-                    <h5>LOREM IPSUM ARACT</h5>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repudiandae facilis molestiae
-                        voluptatibus explicabo unde in autem debitis perspiciatis excepturi, corrupti suscipit quaerat
-                        ipsum possimus rem corporis animi consequatur dolores nostrum, ad inventore quam aliquam. Est
-                        ducimus, harum velit ipsum qui inventore incidunt dolorem recusandae sunt dignissimos
-                        consequatur alias temporibus quos mollitia quam voluptate voluptatem aperiam in nesciunt iste.
-                        Maiores, sapiente.</p>
-                </div>
-                <div class="col-md-4">
-                    <h5>LOREM IPSUM ARACT</h5>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repudiandae facilis molestiae
-                        voluptatibus explicabo unde in autem debitis perspiciatis excepturi, corrupti suscipit quaerat
-                        ipsum possimus rem corporis animi consequatur dolores nostrum, ad inventore quam aliquam. Est
-                        ducimus, harum velit ipsum qui inventore incidunt dolorem recusandae sunt dignissimos
-                        consequatur alias temporibus quos mollitia quam voluptate voluptatem aperiam in nesciunt iste.
-                        Maiores, sapiente.</p>
-                </div>
-                <div class="col-md-4">
-                    <h5>LOREM IPSUM ARACT</h5>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repudiandae facilis molestiae
-                        voluptatibus explicabo unde in autem debitis perspiciatis excepturi, corrupti suscipit quaerat
-                        ipsum possimus rem corporis animi consequatur dolores nostrum, ad inventore quam aliquam. Est
-                        ducimus, harum velit ipsum qui inventore incidunt dolorem recusandae sunt dignissimos
-                        consequatur alias temporibus quos mollitia quam voluptate voluptatem aperiam in nesciunt iste.
-                        Maiores, sapiente.</p>
-
-                </div>
-            </div>
-        </div>
-    </section>
-    <!--fim como funciona-->
 
     <!--início depoimento-->
     <section id="depoimento" class="caixa">

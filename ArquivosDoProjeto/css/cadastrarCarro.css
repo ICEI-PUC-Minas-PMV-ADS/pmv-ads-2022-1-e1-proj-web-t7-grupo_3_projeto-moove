@@ -1,0 +1,18 @@
+#form-carro{
+    margin: 240px;
+    margin-bottom: 0px;
+}
+label{
+    color: rgb(255, 255, 0);
+    font-size: 30px;
+}
+input{
+    color: white;
+}
+small{
+    color: white;
+}
+#check{
+    font-size: 20px;
+    color:white
+}
