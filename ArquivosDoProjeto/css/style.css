@@ -31,8 +31,6 @@ nav.navbar-transparente {
     
 }
 
-
-
 .navbar-light .navbar-nav .nav-link {
     color: white;
     margin: 0 15px;
@@ -59,6 +57,10 @@ nav.navbar-transparente {
     background: url("../img/imagem2.jpg") repeat-x;      
     margin-bottom: 100px;
     height: 500px;
+}
+
+#servicos img {
+    width: 800px;
 }
 
 /* capa
@@ -137,9 +139,9 @@ nav.navbar-transparente {
     font-size: 0.9em
 }
 
-/* Como funciona
+/* Depoimentos
 ----------------------*/
-#como-funciona .duvida-texto  {
+#depoimento .duvida-texto  {
     background: url("../img/escritorio.jpg");
     background-attachment: fixed;
     /*background-size:cover;*/
@@ -149,11 +151,7 @@ nav.navbar-transparente {
     
 }
 
-#como-funciona {
-    margin-bottom: 20px;
-}
-
-#como-funciona .duvida-texto h4 {
+#depoimento .duvida-texto h4 {
     text-transform: uppercase;
     line-height: 2em;
     font-weight: 700;
@@ -161,42 +159,20 @@ nav.navbar-transparente {
     padding: 20px 0;
 }
 
-#como-funciona h5 {
-    padding-top: 50px;
-}
-
-#como-funciona p {
-    opacity: .6;;
-    font-size: 0.9em;
-    text-align: start;
-    line-height: 1.6em;
-    padding-top: 10px;
-}
-
-
-/* Depoimentos
-----------------------*/
 #depoimento {
-    margin-top: 30px;
-}
-
-#depoimento h2 {
-    text-align: center;
-    margin-bottom: 20px;
+    margin-top: 20px;
 }
 
 #depoimento .depoimento-caixa {
     position: relative;
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
 
 #depoimento .imagens-depoimento .aspa {
     position: absolute;
     top: 50px;
     left: 210px;
-}
-
-#depoimento h2 {
-    padding: 10px;
 }
 
 #depoimento h3 {
