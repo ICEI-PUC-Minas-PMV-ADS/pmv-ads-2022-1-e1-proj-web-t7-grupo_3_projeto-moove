@@ -9,17 +9,42 @@
         integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/dadd5e2854.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/info-carro.css">
+    <script src="login.js"></script>
+    <script src="cadastroCarro.js"></script>
     <title>Document</title>
+    <script>
+        function initPage() {
+
+            debugger
+            // Associa a função de logout ao botão
+            //document.getElementById('btn_logout').addEventListener('click', logoutUser);
+
+            // Informa o nome do usuário logado
+
+            if (typeof usuarioCorrente.nome != "undefined") {
+                document.getElementById('nomeUsuario').innerHTML = usuarioCorrente.nome;
+            }
+            else {
+
+                document.getElementById('nomeUsuario').innerHTML = 'Logar';
+            }
+
+            // Lista os usuários 
+            //exibeUsuarios ();
+        }
+
+        window.addEventListener('load', initPage);
+    </script>
 </head>
 
-<body>
+<body onload="mapearDadosCarro()">
 
     <header>
-        <!--início cabeçalho-->
         <nav class="navbar navbar-expand-md navbar-light fixed-top navbar-transparente">
             <div class="container">
 
-                <a href="" class="navbar-brand">
+
+                <a href="index.html" class="navbar-brand">
                     <img src="img/logos.png" width="142px">
                 </a>
 
@@ -30,23 +55,20 @@
                 <div class="collapse navbar-collapse" id="nav-principal">
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item">
-                            <a href="" class="nav-link">Carros Disponíveis</a>
+                            <a href="lista_carro.html" class="nav-link">Carros Disponíveis</a>
                         </li>
                         <li class="nav-item">
-                            <a href="" class="nav-link">Sobre a Moove</a>
+                            <a href="#planos" class="nav-link">Sobre a Moove</a>
                         </li>
                         <li class="nav-item">
-                            <a href="" class="nav-link">Avaliações</a>
+                            <a href="#depoimento" class="nav-link">Avaliações</a>
                         </li>
                         <li class="nav-item">
                             <a href="" class="nav-link">Como Alugar</a>
                         </li>
-                        <li class="nav-item">
-                            <a href="" class="nav-link">Perfil Usuário</a>
-                        </li>
                         <li class="nav-item divisor"></li>
                         <li class="nav-item">
-                            <a href="" class="btn btn-outline-warning ml-4">Logar</a>
+                            <a href="login.html" class="btn btn-outline-warning ml-4"><span id="nomeUsuario"></span></a>
                         </li>
                     </ul>
                 </div>
@@ -57,93 +79,7 @@
     <!--fim cabeçalho-->
 
     <section id="home">
-        <!--Início Home-->
-        <div id="info-carro">
-            <div class="container">
-                <div class="row">
-                    
-                    <div class="col-md-4 caixa">
-                        <div class="b-esquerda">
-                            <h6>Chevrolet Cruze</h6>
-                            <h6 class="valor">$120.000</h6>
-                            <hr>
-                            <p>CATEGORIA: <span> SEDAN</span></p>
-                            <p>CONDIÇÃO: <span>USADO</span></p>
-                            <p>ANO: <span>2008</span></p>
-                            <p>QUILOMETRAGEM:<span>15.000</span></p>
-                            <p>ASSENTOS: <span>5</span></p>
-                            <p>MOTOR: <span>1.6</span></p>
-                            <p>COR: <span>PRATA</span></p>
-                            <hr>
-                            <div class="detalhes">
-                                <p>
-                                    <span>
-                                        <span class="fa fa-check" style="color: #bc001f ;" ::before></span>
-                                        Ar condicionado
-                                    </span>
-                                </p>
-                            </div>
-                            <div class="detalhes">
-                                <p>
-                                    <span>
-                                        <span class="fa fa-check" style="color: #bc001f ;" ::before></span>
-                                        Seguro
-                                    </span>
-                                </p>
-                            </div>
-                            <div class="detalhes">
-                                <p>
-                                    <span>
-                                        <span class="fa fa-check" style="color: #bc001f ;" ::before></span>
-                                        Vidro elétrico
-                                    </span>
-                                </p>
-                            </div>
-                            <div class="detalhes"> 
-                                <p>
-                                    <span>
-                                        <span class="fa fa-check" style="color: #bc001f ;" ::before></span>
-                                        Direção elétrica
-                                    </span>
-                                </p>
-                            </div>
-                            <div class="detalhes">
-                                <p>
-                                    <span>
-                                        <span class="fa fa-check" style="color: #bc001f ;" ::before></span>
-                                        Motor flex
-                                    </span>
-                                </p>
-                            </div>
-                            <hr>
-                            <p class="texto">Nosso objetivo em relação aos nossos clientes é resolver todos os problemas de reparo do veículo em um ambiente acolhedor e profissional para inspirar seu deleite sempre. Esperamos ganhar a confiança de todos os clientes e sermos tratados de forma justa com a mais alta ética.</p>    
-                            
-                            <div>
-                                <button  class="btn btn-amarelo" type="button">ALUGAR</button>
-                            </div>
-                        </div>
-                    </div>
 
-                    <div class="col-md-8 caixa">
-                        <div class="row carros">
-                            <div class="col-md-12">
-                                <img src="img/Cruze.jpg" class="img-fluid">
-                            </div>
-                        </div>
-                        <div class="row albuns">
-                            <div class="col-md-6">
-                                <img src="img/cruze-interior2.jpg" class="img-fluid">
-                            </div>
-                            <div class="col-md-6">
-                                <img src="img/chevrolet-interior.png" style="height: 100%;" class="img-fluid">
-                            </div>
-                        </div>
-                    </div>
-
-
-                </div>
-            </div>
-        </div>
     </section>
     <!--fim home-->
 
@@ -200,7 +136,70 @@
 
 
 
+    <script>
 
+        function cadastrarCarro() {
+            // Cancela a submissão do formulário para tratar sem fazer refresh da tela
+            if (typeof usuarioCorrente.nome == "undefined") {
+                alert("Por favor, faça o login")
+            }
+            else {
+
+                alert("Em desenvolvimento")
+            }
+
+        }
+
+        function mapearDadosCarro()
+        {
+            const queryString = window.location.search;
+            const urlParams = new URLSearchParams(queryString);
+   debugger
+            var carro = db_carros.carros.find(x => {
+                return x.id == urlParams.get('id')
+            } )
+
+            document.getElementById('home').innerHTML = `        <!--Início Home-->
+        <div id="info-carro">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-md-4 caixa">
+                        <div class="b-esquerda">
+                            <h6>${carro.nomeCarro}</h6>
+                            <h6 class="valor">$120.000</h6>
+                            <hr>
+                            <p>CATEGORIA: <span> ${carro.categoria}</span></p>
+                            <p>CONDIÇÃO: <span>${carro.condicao}</span></p>
+                            <p>ANO: <span>${carro.ano}</span></p>
+                            <p>QUILOMETRAGEM:<span>${carro.km}</span></p>
+                            <p>ASSENTOS: <span>${carro.lugares}</span></p>
+                            <p>MOTOR: <span>${carro.motor}</span></p>
+                            <p>COR: <span>${carro.cor}</span></p>
+                            <hr>
+                            <p class="texto">${carro.descricao}</p>
+
+                            <div>
+                                <button class="btn btn-amarelo" onclick="cadastrarCarro()" type="button">ALUGAR</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-8 caixa">
+                        <div class="row carros">
+                            <div class="col-md-12">
+                                <img src=${carro.imagem} class="img-fluid">
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>`
+        }
+
+    </script>
 
 
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
