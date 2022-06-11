@@ -261,8 +261,14 @@
                     cor: campoCor };
 
 
-                insertCarro(carro);
-
+                var retorno = insertCarro(carro);
+                
+                if(retorno)
+                {
+                    alert("Carro Inserido com sucesso")
+                    window.location.href = "lista_carro.html"
+                }
+            
                 // Limpa o formulario
                 $("#form-carro")[0].reset();
             });

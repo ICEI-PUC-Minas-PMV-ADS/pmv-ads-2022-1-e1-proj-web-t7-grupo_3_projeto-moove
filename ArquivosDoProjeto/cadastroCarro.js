@@ -69,5 +69,7 @@ function insertCarro(carro) {
 
     // Atualiza os dados no Local Storage
     localStorage.setItem('db_carros', JSON.stringify(db));
+    
+    return true
 }
 

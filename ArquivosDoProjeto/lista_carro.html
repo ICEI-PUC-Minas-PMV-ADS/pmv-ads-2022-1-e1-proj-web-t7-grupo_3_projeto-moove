@@ -212,8 +212,8 @@
             $("#tabela-carros").html("");
 
             // Popula a tabela com os registros do banco de dados
-            for (i = 0; i < db_carros.carros.length; i++) {
-                let carro = db_carros.carros[i];
+            for (i = 0; i < db.carros.length; i++) {
+                let carro = db.carros[i];
                 debugger
                 document.getElementById("tabela-carros").innerHTML += `
                     <div class="card mb-4 bg-light" >
