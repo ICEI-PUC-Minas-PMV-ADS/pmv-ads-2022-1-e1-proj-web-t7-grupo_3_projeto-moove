@@ -4,42 +4,47 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Login</title>
+	<title>Login - Moove</title>
+    <link rel="stylesheet" href="css/login.css">
+
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
 	 crossorigin="anonymous">
-     <style>   
-      body{
-          background-color: rgb(119, 119, 119);
-      }
+     
     </style>
 </head>
 
 <body>
-	<div id="login">
-		<h3 class="text-center text-white pt-5">Novo Usuário</h3>
-		<div class="container">
-			<div id="login-row" class="row justify-content-center align-items-center">
-				<div id="login-column" class="col-md-6">
-					<div id="login-box" class="col-md-12">
-						<form id="login-form" class="form" method="post" onsubmit="loginUser (this)">
-							<div class="form-group">
-								<label for="username" class="text-white">Usuário</label><br>
-                                <input type="text" name="username" id="username" class="form-control">
+
+	<section id="section-login" class="d-flex">
+        <div class="container align-self-center">
+            <div id="login">
+                <img src="img/User.png" class="img-user">
+                <h3 class="text-center pt-5" style="color: #ffc107">Novo Usuário</h3>
+                <div class="container">
+                    <div id="login-row" class="row justify-content-center align-items-center">
+                        <div id="login-column" class="col-md-6">
+                            <div id="login-box" class="col-md-12">
+                                <form id="login-form" class="form" method="post" onsubmit="loginUser (this)">
+                                    <div class="form-group">
+                                        <label for="username" class="text-white">Usuário</label><br>
+                                        <input type="text" name="username" id="username" class="form-control btn-input">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="password" class="text-white">Senha</label><br>
+                                        <input type="text" name="password" id="password" class="form-control btn-input">
+                                    </div>
+                                    <div class="form-group text-left">                                
+                                        <input type="submit" name="submit" class="btn btn-amarelo btn-md" value="Entrar">
+                                        <button type="button" class="btn btn-info" data-toggle="modal" data-target="#loginModal">Novo usuario</button>
+                                    </div>
+                                </form>
                             </div>
-                            <div class="form-group">
-                                <label for="password" class="text-white">Senha</label><br>
-                                <input type="text" name="password" id="password" class="form-control">
-                            </div>
-                            <div class="form-group text-left">                                
-                                <input type="submit" name="submit" class="btn btn-success btn-md" value="Entrar">
-                                <button type="button" class="btn btn-info" data-toggle="modal" data-target="#loginModal">Novo usuario</button>
-                            </div>
-                        </form>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>    
+    </section>    
 
   <!-- Modal -->
   <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">

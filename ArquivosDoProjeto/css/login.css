@@ -1,0 +1,60 @@
+/* Layout
+----------------------*/
+html, body, #section-login {
+    height: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#section-login {
+    background: url("../img/slider-item-1-2.jpg") no-repeat;
+    background-size: cover;
+    background-position: center;
+
+}
+
+.container {
+    background-color: rgba(0, 0, 0, .4);
+}
+
+
+#section-login img.img-user {
+    display: block;
+    margin: 0 auto;
+    position: relative;
+    top: -30px;
+
+}
+
+#section-login h3 {
+    margin-bottom: 80px;
+}
+
+#section-login label {
+    font-weight: 700;
+}
+
+#section-login input.btn-input {
+    background-color: rgba(33, 37, 41, .2);
+    border-color: rgba(255, 193, 7, 1);
+    color: rgba(255, 255, 255, .5);
+    border-radius: 0;
+    border-left: none;
+    border-right: none ;
+    border-top: none; 
+    outline: 0;
+}
+
+#section-login input.btn-input:focus {
+    border-color: rgba(255, 193, 7, 0);
+    border-color: rgba(255, 193, 7, .5);
+    box-shadow: 0 0 0 0;
+} 
+
+#section-login input.btn-amarelo {
+    background: #ffc107;
+}
+
+#section-login input.btn-amarelo:hover {
+    background: yellow;
+    color: black;
+}
