@@ -40,6 +40,18 @@
             // Informa o nome do usuário logado
 
             if (typeof usuarioCorrente.nome != "undefined") {
+                document.getElementById('btn-login-out').innerHTML = `
+                    <div class="dropdown">
+                        <a class="btn btn-outline-warning dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-expanded="false">
+                            <span id="nomeUsuario">
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a onclick="logoutUser();" class="dropdown-item" href="#">Logout</a>
+                                  
+                        </div>
+                    </div>
+                `;
+
                 document.getElementById('nomeUsuario').innerHTML = usuarioCorrente.nome;
                 document.getElementById('cadastrarCarro').hidden = false;
             }
@@ -102,7 +114,7 @@
                                 <a href="" class="nav-link" id="nomeUsuario">Perfil Usuário</a>
                             </li> -->
                         <li class="nav-item divisor"></li>
-                        <li class="nav-item">
+                        <li id="btn-login-out" class="nav-item">
                             <a href="login.html" class="btn btn-outline-warning ml-4"><span id="nomeUsuario"></span></a>
                         </li>
                     </ul>

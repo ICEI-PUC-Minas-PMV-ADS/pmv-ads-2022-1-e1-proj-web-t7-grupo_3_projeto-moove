@@ -76,7 +76,7 @@ function loginUser (login, senha) {
 function logoutUser () {
     usuarioCorrente = {};
     sessionStorage.setItem ('usuarioCorrente', JSON.stringify (usuarioCorrente));
-    window.location = LOGIN_URL;
+    window.location = 'index.html';
 }
 
 function addUser (nome, login, senha, email) {
