@@ -1,0 +1,24 @@
+message: Please cite this software using these metadata.
+title:Gestão de aluguel de carros
+authors:
+  - family-names: Henrique Pastor Pereira
+    given-names: Fellipe 
+  - family-names: De Oliveira Borges
+    given-names: Lucas 
+  - family-names: Fellipe Pereira Pires
+    given-names: Luiz 
+  - family-names: Pedro Pereira Santos
+    given-names: João 
+  - family-names: Gomes
+    given-names: Guilherme 
+  - name-suffix: Professor
+    affiliation: PUC Minas
+    family-names: Assis Valentim
+    given-names: Nathalia 
+keywords:
+  - Carro
+  - Aluguel
+  - Gestão
+repository-code: https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2022-1-e1-proj-web-t7-grupo_3_projeto-moove
+version: 1.0.0
+date-released: 2022-06-26
